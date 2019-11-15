@@ -63,7 +63,7 @@ choirPart = \new ChoirStaff <<
   >>
 >>
 
-miditempo = 52
+miditempo = 66
 
 \score {
   <<
