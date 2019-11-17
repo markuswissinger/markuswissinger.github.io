@@ -38,15 +38,15 @@ sopranoA = \relative c' {
   d g, c b
   b( a8) r d4 d
   d g, c b
-  a4 r <c e> <c e>
-  <c e> <b d> <a c> <gis b>
+  a4 r e' e
+  e d c b
   
-  <a c> r a b8( c)
+  c r a b8( c)
   d4. g,8 g4 a
-  b r <c e> <c e>
-  <c e> <b d> <a c> <gis b>
+  b r e e
+  e d c b
   
-  <a c> r a b8( c)
+  c r a b8( c)
   d4. g,8 g4 a
   g r \bar "||" \break \stemUp 
 }
@@ -87,7 +87,39 @@ skip_beginning = \relative c' {
   s2 s1*19 s2
 }
 
-alto = \relative c' {
+altoA = \relative c' {
+  \partial 2
+  \global
+  \stemNeutral
+  d4 g
+  
+  g4. fis8 g4 b
+  b( a8) r d4 d
+  d4. c8 b4 a
+  b4 r d, g
+  
+  g4. fis8 g4 b 
+  b( a8) r d4 a \break
+  a4. fis8 fis4 e 
+  d r d' d
+  
+  d g, c b
+  b( a8) r d4 d
+  d g, c b
+  a4 r c c
+  c b a gis
+  
+  a r a b8( c)
+  d4. g,8 g4 a
+  b r c c
+  c b a gis
+  
+  a r a b8( c)
+  d4. g,8 g4 a
+  g r \bar "||" \break \stemUp 
+}
+
+altoB = \relative c' {
   \global
   d4 d
   
@@ -202,7 +234,7 @@ choirPart = \new ChoirStaff <<
     instrumentName = \markup \center-column { "Sopran" "Alt" }
   } <<
     \new Voice = "soprano" { \voiceOne \sopranoA \sopranoB }
-    \new Voice = "alto" { \voiceTwo \skip_beginning \alto }
+    \new Voice = "alto" { \voiceTwo \altoA \altoB }
   >>
   \new Staff = "tb" \with {
     instrumentName = \markup \center-column { "Tenor" "Bass" }
@@ -230,7 +262,7 @@ tuttiPart = \new ChoirStaff <<
     instrumentName = \markup \center-column { "Sopran" "Alt" }
   } <<
     \new Voice = "soprano" { \voiceOne \sopranoB }
-    \new Voice = "alto" { \voiceTwo \alto }
+    \new Voice = "alto" { \voiceTwo \altoB }
   >>
   \new Staff = "tb" \with {
     instrumentName = \markup \center-column { "Tenor" "Bass" }
@@ -273,7 +305,7 @@ tuttiPart = \new ChoirStaff <<
     <<
       \new Staff
       \new Voice {
-        \alto
+        \altoA \altoB
       }
     >>
     \midi { \tempo 4 = \miditempo }
