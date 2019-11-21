@@ -16,38 +16,89 @@ soprano = \relative c'' {
   \global
   cis4 | 
   cis2.~ cis8. cis16 | 
-  \tuplet 3/2 {cis8~ cis cis} b4 \tuplet 3/2 {a8~ a a} cis4 | 
+  cis8 cis b4 a8 a cis4 | 
   b2.~ b8. a16 | 
-  \tuplet 3/2 {cis8~ cis cis} b4 \tuplet 3/2 {a8~ a a} cis4 |
+  cis8 cis b4 a8 a cis4 |
   cis2.~ cis8. cis16 | 
-  \tuplet 3/2 {cis8~ cis cis} b4 \tuplet 3/2 {a8~ a a} \tuplet 3/2 {a8~ a b} | 
-  \tuplet 3/2 {cis~ cis cis} \tuplet 3/2 {cis~ cis cis} \tuplet 3/2 {b~ b b~ } \tuplet 3/2 {b~ b b8} | 
+  cis8 cis b4 a8 a a b | 
+  cis cis cis cis b b4 b8 | 
   a2.~ a8 r8 |
   
-  r2 \tuplet 3/2 {r8~ r8 a8~} \tuplet 3/2 {a~ a fis8} | 
-  e4 fis e \tuplet 3/2 {fis8~ fis fis} | 
-  \tuplet 3/2 {a~ a a} cis4 a2~ | 
-  a1~ | a2. \tuplet 3/2 {fis8~ fis fis} | e4 fis e \tuplet 3/2 {fis8~ fis fis} | 
-  \tuplet 3/2 {a~ a a} cis4 a \tuplet 3/2 {d8~ d d} | \tuplet 3/2 {cis~ cis cis} \tuplet 3/2 {cis~ cis cis} \tuplet 3/2 {b~ b b8~} \tuplet 3/2 {b8~ b b8} | a2.
+  r2 r8 a4 fis8 | 
+  e4 fis e fis8 fis | 
+  a a cis4 a2~ | 
+  a1~ | a2. fis8 fis | e4 fis e fis8 fis | 
+  a a cis4 a d8 d | 
+  cis cis cis cis b b4 b8 | 
+  a2.
   
   
 }
 
 alto = \relative c'' {
   \global
-  a4
+  a4 |
+  a2.~ a8. a16 |
+  a8 a gis4 a8 a a4 |
+  gis2.~ gis8. a16 |
+  a8 a gis4 a8 a a4 |
+  a2.~ a8. a16 |
+  a8 a gis4 a8 a a a |
+  a a a a gis gis4 gis8 | 
+  e2.~ e8 r8 |
   
-  
+  r1 | r1 | 
+  r2 r4 r8 fis8 |
+  a4 fis e d8 d |
+  cis cis b4 a d8 d |
+  cis4 d cis d8 d |
+  cis cis e4 cis fis8 fis |
+  e e e e d d4 d8 | 
+  a2.
 }
 
 tenor = \relative c' {
   \global
-  e4
+  e4 |
+  e2.~ e8. e16 |
+  e8 e d4 cis8 cis e4 |
+  d2.~ d8. cis16 |
+  e8 e d4 cis8 cis e4 |
+  e2.~ e8. e16 |
+  e8 e d4 cis8 cis fis fis |
+  e e e e d d4 d8 | 
+  cis2.~ cis8 r8 |
+  
+  r2 r8 a4 fis8 | 
+  e4 fis e fis8 fis | 
+  a a cis4 a2~ | 
+  a1~ | a2. a8 a | a4 a a a8 a | 
+  a a a4 a a8 a | 
+  a a a a gis gis4 gis8 | 
+  a2.
+  
 }
 
 bass = \relative c' {
   \global
-  a4
+  a4 |
+  a2.~ a8. a16 |
+  a8 a a4 a8 a a4 |
+  e2.~ e8. e16 |
+  e8 e e4 a8 a a4 |
+  a2.~ a8. a16 |
+  e8 e e4 fis8 fis d d |
+  e e e e e e4 e8 | 
+  a,2.~ a8 r8 |
+  
+  r1 | r1 | 
+  r2 r4 r8 fis'8 |
+  a4 fis e d8 d |
+  cis cis b4 a a8 a |
+  a4 a a a8 a |
+  a a a4 a d8 d |
+  e e e e e e4 e8 | 
+  a,2.
 }
 
 
