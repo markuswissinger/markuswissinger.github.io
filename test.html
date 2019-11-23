@@ -10,7 +10,9 @@
 	let voices = ['', '-Toene', '-Sopran', '-Alt', '-Tenor', '-Bass']
 	for (let name of names) {
 		for (let voice of voices) {
-			new XMLHttpRequest().open('GET', name.concat('weihnachten/', name, '/', name, voice, '.mid'), true);
+			let request=new XMLHttpRequest();
+			request.onload={console.log(name.concat(voice))}
+			request.open('GET', name.concat('weihnachten/', name, '/', name, voice, '.mid'), true);
 		}
 	}
 	new XMLHttpRequest().open('GET', 'weihnachten/hark_the_herald_angels_sing/hark_the_herald_angels_sing-Tutti.mid', true);
@@ -18,7 +20,7 @@
   </head>
   <body>
     
-	<h1>Weihnachten - Test Page 5</h1>
+	<h1>Weihnachten - Test Page 6</h1>
 	
 	
 	<h2>In the Bleak Midwinter</h2>
