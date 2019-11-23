@@ -10,10 +10,10 @@
 	let voices = ['', '-Sopran', '-Alt', '-Tenor', '-Bass']
 	for (let name of names) {
 		for (let voice of voices) {
-			new XMLHttpRequest().open('GET', name.concat('weihnachten/', name, '/', name, voice, '.mid'), true);
+			new XMLHttpRequest().open('GET', name.concat('weihnachten/', name, '/', name, voice, '.mid'), false);
 		}
 	}
-	new XMLHttpRequest().open('GET', 'weihnachten/hark/hark_the_herald_angels_sing-Tutti.mid', true);
+	new XMLHttpRequest().open('GET', 'weihnachten/hark/hark_the_herald_angels_sing-Tutti.mid', false);
 	</script>
   </head>
   <body>
