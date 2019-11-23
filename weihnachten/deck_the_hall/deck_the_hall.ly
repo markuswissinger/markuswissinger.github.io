@@ -9,7 +9,13 @@ global = {
 
 #(set-global-staff-size 18)
 
-
+toene = \absolute {
+  \global
+  es2
+  bes2
+  g'2
+  bes'2
+}
 
 soprano = \relative c'' {
   \global
@@ -70,6 +76,19 @@ miditempo = 100
   \layout { }
   \midi {
     \tempo 4=\miditempo
+  }
+}
+
+\book {
+  \bookOutputSuffix "Toene"
+  \score {
+    <<
+      \new Staff
+      \new Voice {
+        \toene
+      }
+    >>
+    \midi { \tempo 4 = \miditempo }
   }
 }
 

@@ -77,6 +77,14 @@ chordNames = \chordmode {
   
 }
 
+toene = \absolute {
+  \global
+  g2
+  g2
+  g'2
+  g'2
+}
+
 soprano = \relative c'' {
   \global
   g8
@@ -333,6 +341,19 @@ miditempo = 60
   \layout { }
   \midi {
     \tempo 4 = \miditempo
+  }
+}
+
+\book {
+  \bookOutputSuffix "Toene"
+  \score {
+    <<
+      \new Staff
+      \new Voice {
+        \toene
+      }
+    >>
+    \midi { \tempo 4 = \miditempo }
   }
 }
 

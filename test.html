@@ -7,23 +7,24 @@
 	<script type='text/javascript' src='//www.midijs.net/lib/midi.js'></script>
 	<script>
 	let names = ['bleak_midwinter','christmas_in_heaven','deck_the_hall','good_news'];
-	let voices = ['', '-Sopran', '-Alt', '-Tenor', '-Bass']
+	let voices = ['', '-Toene', '-Sopran', '-Alt', '-Tenor', '-Bass']
 	for (let name of names) {
 		for (let voice of voices) {
 			new XMLHttpRequest().open('GET', name.concat('weihnachten/', name, '/', name, voice, '.mid'), true);
 		}
 	}
-	new XMLHttpRequest().open('GET', 'weihnachten/hark/hark_the_herald_angels_sing-Tutti.mid', true);
+	new XMLHttpRequest().open('GET', 'weihnachten/hark_the_herald_angels_sing/hark_the_herald_angels_sing-Tutti.mid', true);
 	</script>
   </head>
   <body>
     
-	<h1>Weihnachten - Test Page 3</h1>
+	<h1>Weihnachten - Test Page 5</h1>
 	
 	
 	<h2>In the Bleak Midwinter</h2>
-	
+		
 	<a href="#" onClick="MIDIjs.play('weihnachten/bleak_midwinter/bleak_midwinter.mid');">Alle</a>
+	<a href="#" onClick="MIDIjs.play('weihnachten/bleak_midwinter/bleak_midwinter-Toene.mid');">Töne</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/bleak_midwinter/bleak_midwinter-Sopran.mid');">Sopran</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/bleak_midwinter/bleak_midwinter-Alt.mid');">Alt</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/bleak_midwinter/bleak_midwinter-Tenor.mid');">Tenor</a>
@@ -34,6 +35,7 @@
 	<h2>Christmas in Heaven</h2>
 	
 	<a href="#" onClick="MIDIjs.play('weihnachten/christmas_in_heaven/christmas_in_heaven.mid');">Alle</a>
+	<a href="#" onClick="MIDIjs.play('weihnachten/christmas_in_heaven/christmas_in_heaven-Toene.mid');">Töne</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/christmas_in_heaven/christmas_in_heaven-Sopran.mid');">Sopran</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/christmas_in_heaven/christmas_in_heaven-Alt.mid');">Alt</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/christmas_in_heaven/christmas_in_heaven-Tenor.mid');">Tenor</a>
@@ -44,6 +46,7 @@
 	<h2>Deck the Hall</h2>
 	
 	<a href="#" onClick="MIDIjs.play('weihnachten/deck_the_hall/deck_the_hall.mid');">Alle</a>
+	<a href="#" onClick="MIDIjs.play('weihnachten/deck_the_hall/deck_the_hall-Toene.mid');">Töne</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/deck_the_hall/deck_the_hall-Sopran.mid');">Sopran</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/deck_the_hall/deck_the_hall-Alt.mid');">Alt</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/deck_the_hall/deck_the_hall-Tenor.mid');">Tenor</a>
@@ -53,6 +56,7 @@
 	<h2>Good News</h2>
 	
 	<a href="#" onClick="MIDIjs.play('weihnachten/good_news/good_news.mid');">Alle</a>
+	<a href="#" onClick="MIDIjs.play('weihnachten/good_news/good_news-Toene.mid');">Töne</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/good_news/good_news-Sopran.mid');">Sopran</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/good_news/good_news-Alt.mid');">Alt</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/good_news/good_news-Tenor.mid');">Tenor</a>
@@ -62,6 +66,7 @@
 	<h2>Hark the Herald Angel</h2>
 	
 	<a href="#" onClick="MIDIjs.play('weihnachten/hark_the_herald_angels_sing/hark_the_herald_angels_sing.mid');">Alle</a>
+	<a href="#" onClick="MIDIjs.play('weihnachten/hark_the_herald_angels_sing/hark_the_herald_angels_sing-Toene.mid');">Töne</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/hark_the_herald_angels_sing/hark_the_herald_angels_sing-Tutti.mid');">Tutti</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/hark_the_herald_angels_sing/hark_the_herald_angels_sing-Sopran.mid');">Sopran</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/hark_the_herald_angels_sing/hark_the_herald_angels_sing-Alt.mid');">Alt</a>
@@ -73,6 +78,7 @@
 	<h2>Stralande Jul</h2>
 	
 	<a href="#" onClick="MIDIjs.play('weihnachten/stralande_jul/stralande_jul.mid');">Alle</a>
+	<a href="#" onClick="MIDIjs.play('weihnachten/stralande_jul/stralande_jul-Toene.mid');">Töne</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/stralande_jul/stralande_jul-Sopran.mid');">Sopran</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/stralande_jul/stralande_jul-Alt.mid');">Alt</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/stralande_jul/stralande_jul-Tenor.mid');">Tenor</a>

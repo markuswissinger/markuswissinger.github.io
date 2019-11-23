@@ -19,6 +19,14 @@ global = {
   
 }
 
+toene = \absolute {
+  \global
+  g2
+  b2
+  d'2
+  d'2
+}
+
 sopranoA = \relative c' {
   \partial 2
   \global
@@ -254,6 +262,19 @@ miditempo = 100
   \layout { }
   \midi {
     \tempo 4 = \miditempo
+  }
+}
+
+\book {
+  \bookOutputSuffix "Toene"
+  \score {
+    <<
+      \new Staff
+      \new Voice {
+        \toene
+      }
+    >>
+    \midi { \tempo 4 = \miditempo }
   }
 }
 
