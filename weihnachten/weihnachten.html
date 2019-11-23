@@ -9,8 +9,6 @@
 	let voices = ['', '-Toene', '-Sopran', '-Alt', '-Tenor', '-Bass']
 	function load(url){
 		let request=new XMLHttpRequest();
-		request.onload=()=>console.log(url);
-		request.onerror=()=>console.log(url+' ERROR');
 		request.open('GET', url, true);
 		request.responseType = 'arraybuffer';
 		request.send(null);
