@@ -11,6 +11,7 @@
 		let request=new XMLHttpRequest();
 		request.onload=()=>{
 			window[path]=request.response;
+			console.log(path);
 		};
 		request.onerror=()=>console.log(path+' ERROR');
 		request.open('GET', path, true);
@@ -28,6 +29,7 @@
   <body>
     
 	<h1>Weihnachten - Test Page 12</h1>
+	
 	
 	
 	<h2>In the Bleak Midwinter</h2>
