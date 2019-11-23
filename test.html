@@ -6,11 +6,14 @@
     <title>Chor</title>
 	<script type='text/javascript' src='//www.midijs.net/lib/midi.js'></script>
 	<script>
-	new XMLHttpRequest().open('GET', 'weihnachten/bleak_midwinter/bleak_midwinter.mid', true);
-	new XMLHttpRequest().open('GET', 'weihnachten/bleak_midwinter/bleak_midwinter-Sopran.mid', true);
-	new XMLHttpRequest().open('GET', 'weihnachten/bleak_midwinter/bleak_midwinter-Alt.mid', true);
-	new XMLHttpRequest().open('GET', 'weihnachten/bleak_midwinter/bleak_midwinter-Tenor.mid', true);
-	new XMLHttpRequest().open('GET', 'weihnachten/bleak_midwinter/bleak_midwinter-Bass.mid', true);
+	let midis = ['bleak_midwinter','christmas_in_heaven','deck_the_hall','good_news'];
+	let voices = ['', '-Sopran', '-Alt', '-Tenor', '-Bass']
+	for (let name of names) {
+		for (let voice of voices) {
+			new XMLHttpRequest().open('GET', name.concat('weihnachten/', name, '/', name, voice, '.mid'), true);
+		}
+	}
+	new XMLHttpRequest().open('GET', 'weihnachten/hark/hark_the_herald_angels_sing-Tutti.mid', true);
 	</script>
   </head>
   <body>
