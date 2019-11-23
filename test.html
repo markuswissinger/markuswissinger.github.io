@@ -9,6 +9,8 @@
 	let voices = ['', '-Toene', '-Sopran', '-Alt', '-Tenor', '-Bass']
 	function load(path){
 		let request=new XMLHttpRequest();
+		request.onload=()=>console.log(path);
+		request.onerror=()=>console.log(path+' ERROR');
 		request.open('GET', path, true);
 		request.send(null);
 	}
@@ -23,7 +25,7 @@
   </head>
   <body>
     
-	<h1>Weihnachten - Test Page 8</h1>
+	<h1>Weihnachten - Test Page 9</h1>
 	
 	
 	<h2>In the Bleak Midwinter</h2>
