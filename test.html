@@ -7,30 +7,32 @@
 	<script>
 	let names = ['bleak_midwinter','christmas_in_heaven','deck_the_hall','good_news'];
 	let voices = ['', '-Toene', '-Sopran', '-Alt', '-Tenor', '-Bass']
-	function load(path){
+	function load(path, window){
 		let request=new XMLHttpRequest();
-		request.onload=()=>console.log(path);
+		request.onload=()=>{
+			window[path]=request.response;
+		};
 		request.onerror=()=>console.log(path+' ERROR');
 		request.open('GET', path, true);
 		request.send(null);
 	}
 	for (let name of names) {
 		for (let voice of voices) {
-			load(name.concat('weihnachten/', name, '/', name, voice, '.mid'));
+			load(name.concat('weihnachten/', name, '/', name, voice, '.mid'), window);
 		}
 	}
-	load('weihnachten/hark_the_herald_angels_sing/hark_the_herald_angels_sing-Tutti.mid');
+	load('weihnachten/hark_the_herald_angels_sing/hark_the_herald_angels_sing-Tutti.mid', window);
 	</script>
 	<script type='text/javascript' src='//www.midijs.net/lib/midi.js'></script>
   </head>
   <body>
     
-	<h1>Weihnachten - Test Page 9</h1>
+	<h1>Weihnachten - Test Page 10</h1>
 	
 	
 	<h2>In the Bleak Midwinter</h2>
 		
-	<a href="#" onClick="MIDIjs.play('weihnachten/bleak_midwinter/bleak_midwinter.mid');">Alle</a>
+	<a href="#" onClick="playTimidity(window['weihnachten/bleak_midwinter/bleak_midwinter.mid']);">Alle</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/bleak_midwinter/bleak_midwinter-Toene.mid');">Töne</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/bleak_midwinter/bleak_midwinter-Sopran.mid');">Sopran</a>
 	<a href="#" onClick="MIDIjs.play('weihnachten/bleak_midwinter/bleak_midwinter-Alt.mid');">Alt</a>
