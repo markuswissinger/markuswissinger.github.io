@@ -1,103 +1,48 @@
 <!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chor</title>
-	<script>
-	let names = ['bleak_midwinter','christmas_in_heaven','deck_the_hall','good_news'];
-	let voices = ['', '-Toene', '-Sopran', '-Alt', '-Tenor', '-Bass']
-	function load(url){
-		let request=new XMLHttpRequest();
-		request.onload=()=>console.log(url);
-		request.onerror=()=>console.log(url+' ERROR');
-		request.open('GET', url, true);
-		request.responseType = 'arraybuffer';
-		request.send(null);
-	}
-	function path(name,voice){
-		return String.prototype.concat('weihnachten/', name, '/', name, voice, '.mid');
-	}
-	for (let name of names) {
-		for (let voice of voices) {
-			load(path(name,voice));
-		}
-	}
-	load(path('hark_the_herald_angels_sing','-Tutti'));
-	function play(name,voice){
-		MIDIjs.play(path(name,voice))
-	}
-	</script>
-	<script type='text/javascript' src='//www.midijs.net/lib/midi.js'></script>
-  </head>
-  <body>
+<html xmlns = "http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>test</title>
+ 
+        <!-- shim -->
+        <script src="inc/shim/Base64.js" type="text/javascript"></script>
+        <script src="inc/shim/Base64binary.js" type="text/javascript"></script>
+        <script src="inc/shim/WebAudioAPI.js" type="text/javascript"></script>
+        <script src="inc/shim/WebMIDIAPI.js" type="text/javascript"></script>
+        <!-- jasmid package -->
+        <script src="inc/jasmid/stream.js"></script>
+        <script src="inc/jasmid/midifile.js"></script>
+        <script src="inc/jasmid/replayer.js"></script>
+        <!-- midi.js package -->
+        <script src="js/midi/audioDetect.js" type="text/javascript"></script>
+        <script src="js/midi/gm.js" type="text/javascript"></script>
+        <script src="js/midi/loader.js" type="text/javascript"></script>
+        <script src="js/midi/plugin.audiotag.js" type="text/javascript"></script>
+        <script src="js/midi/plugin.webaudio.js" type="text/javascript"></script>
+        <script src="js/midi/plugin.webmidi.js" type="text/javascript"></script>
+        <script src="js/midi/player.js" type="text/javascript"></script>
+        <script src="js/midi/synesthesia.js" type="text/javascript"></script>
+        <!-- utils -->
+        <script src="js/util/dom_request_xhr.js" type="text/javascript"></script>
+        <script src="js/util/dom_request_script.js" type="text/javascript"></script>
+        
+		<script type="text/javascript">
+        function play() {
+        MIDI.loadPlugin({
+        soundfontUrl: "soundfont/",
+        instrument: "acoustic_grand_piano",
+        onsuccess: function() {
+            MIDI.Player.loadFile("weihnachten/good_news/good_news.mid", MIDI.Player.start);
+            }
+        });
+    }
+
+    </script>
+    </head>
+    <body>
     
-	<h1>Weihnachten - Test Page 16</h1>
 	
+	<a href="#" onclick="play();">PLAY</a>
 	
-	
-	<h2>In the Bleak Midwinter</h2>
-		
-	<a href="#" onClick="play('bleak_midwinter','');">Alle</a>
-	<a href="#" onClick="play('bleak_midwinter','-Toene');">Töne</a>
-	<a href="#" onClick="play('bleak_midwinter','-Sopran');">Sopran</a>
-	<a href="#" onClick="play('bleak_midwinter','-Alt');">Alt</a>
-	<a href="#" onClick="play('bleak_midwinter','-Tenor');">Tenor</a>
-	<a href="#" onClick="play('bleak_midwinter','-Bass');">Bass</a>
-	<a href="#" onClick="MIDIjs.stop();">STOP</a>
-	
-	
-	<h2>Christmas in Heaven</h2>
-	
-	<a href="#" onClick="play('christmas_in_heaven','.mid');">Alle</a>
-	<a href="#" onClick="play('christmas_in_heaven','-Toene');">Töne</a>
-	<a href="#" onClick="play('christmas_in_heaven','-Sopran');">Sopran</a>
-	<a href="#" onClick="play('christmas_in_heaven','-Alt');">Alt</a>
-	<a href="#" onClick="play('christmas_in_heaven','-Tenor');">Tenor</a>
-	<a href="#" onClick="play('christmas_in_heaven','-Bass');">Bass</a>
-	<a href="#" onClick="MIDIjs.stop();">STOP</a>
-	
-	
-	<h2>Deck the Hall</h2>
-	
-	<a href="#" onClick="play('deck_the_hall','');">Alle</a>
-	<a href="#" onClick="play('deck_the_hall','-Toene');">Töne</a>
-	<a href="#" onClick="play('deck_the_hall','-Sopran');">Sopran</a>
-	<a href="#" onClick="play('deck_the_hall','-Alt');">Alt</a>
-	<a href="#" onClick="play('deck_the_hall','-Tenor');">Tenor</a>
-	<a href="#" onClick="play('deck_the_hall','-Bass');">Bass</a>
-	<a href="#" onClick="MIDIjs.stop();">STOP</a>
-	
-	<h2>Good News</h2>
-	
-	<a href="#" onClick="play('good_news','');">Alle</a>
-	<a href="#" onClick="play('good_news','-Toene');">Töne</a>
-	<a href="#" onClick="play('good_news','-Sopran');">Sopran</a>
-	<a href="#" onClick="play('good_news','-Alt');">Alt</a>
-	<a href="#" onClick="play('good_news','-Tenor');">Tenor</a>
-	<a href="#" onClick="play('good_news','-Bass');">Bass</a>
-	<a href="#" onClick="MIDIjs.stop();">STOP</a>
-	
-	<h2>Hark the Herald Angel</h2>
-	
-	<a href="#" onClick="play('hark_the_herald_angels_sing','');">Alle</a>
-	<a href="#" onClick="play('hark_the_herald_angels_sing','-Toene');">Töne</a>
-	<a href="#" onClick="play('hark_the_herald_angels_sing','-Tutti');">Tutti</a>
-	<a href="#" onClick="play('hark_the_herald_angels_sing','-Sopran');">Sopran</a>
-	<a href="#" onClick="play('hark_the_herald_angels_sing','-Alt');">Alt</a>
-	<a href="#" onClick="play('hark_the_herald_angels_sing','-Tenor');">Tenor</a>
-	<a href="#" onClick="play('hark_the_herald_angels_sing','-Bass');">Bass</a>
-	<a href="#" onClick="MIDIjs.stop();">STOP</a>
-	
-	
-	<h2>Stralande Jul</h2>
-	
-	<a href="#" onClick="play('stralande_jul','');">Alle</a>
-	<a href="#" onClick="play('stralande_jul','-Toene');">Töne</a>
-	<a href="#" onClick="play('stralande_jul','-Sopran');">Sopran</a>
-	<a href="#" onClick="play('stralande_jul','-Alt');">Alt</a>
-	<a href="#" onClick="play('stralande_jul','-Tenor');">Tenor</a>
-	<a href="#" onClick="play('stralande_jul','-Bass');">Bass</a>
-	<a href="#" onClick="MIDIjs.stop();">STOP</a>
-  </body>
+    </body>
 </html>
