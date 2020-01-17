@@ -64,7 +64,7 @@ alto = \relative c'' {
     d,1 | 
     
     r1 | r1 | r1 |
-    es4. es8 es4 es | r4 ges2 ges4 | a a a8 a a a | g4 r r d~ | 
+    es4. es8 es4 es | r4 bes'2 bes4 | a a a8 a a a | g4 r r d~ | 
     d2. g4 | f8 f g4 f8 f g g | f f g g f f g g f f r4 fes8 fes r4 | 
     r1 | \time 2/4 r2 |
     
