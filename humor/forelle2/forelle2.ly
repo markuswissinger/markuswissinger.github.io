@@ -12,7 +12,7 @@ global = {
 
 toene = \absolute {
   \global
-  f' f' f' f
+  g g' d' d'
 }
 
 soprano = \relative c' {
